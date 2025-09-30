@@ -1,5 +1,5 @@
+using BootCamp.Data;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Concurrent;
 
 namespace BootCamp.Controllers
 {
@@ -7,9 +7,6 @@ namespace BootCamp.Controllers
     [Route("customer")]
     public class CustomerController : ControllerBase
     {
-        // Thread-safe dictionary to store leaderboard data (customerId -> score)
-        private static readonly ConcurrentDictionary<long, decimal> leaderboard = new();
-
         // 3.1 Update Score
         // POST /customer/{customerid}/score/{score}
         [HttpPost("{customerid:long}/score/{score:decimal}")]
@@ -27,14 +24,14 @@ namespace BootCamp.Controllers
             }
 
             // Insert if not exists, otherwise update by adding the new score
-            leaderboard.AddOrUpdate(
+            LeaderboardData.Leaderboard.AddOrUpdate(
                 customerid,
                 score,                        // initial value if customer does not exist
                 (id, oldScore) => oldScore + score // update function if customer exists
             );
 
             // Return the updated score
-            return Ok(leaderboard[customerid]);
+            return Ok(LeaderboardData.Leaderboard[customerid]);
         }
     }
 }

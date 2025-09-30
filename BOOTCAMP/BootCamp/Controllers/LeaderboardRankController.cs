@@ -1,4 +1,6 @@
+using BootCamp.Data;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace BootCamp.Controllers
 {
@@ -11,9 +13,26 @@ namespace BootCamp.Controllers
         [HttpGet]
         public IActionResult GetCustomersByRank([FromQuery] int start, [FromQuery] int end)
         {
-            // TODO: ???????????
-            // ??????ID???????JSON??
-            return Ok();
+            if (start <= 0 || end < start)
+            {
+                return BadRequest("Invalid rank range.");
+            }
+
+            var rankedLeaderboard = LeaderboardData.Leaderboard
+                .OrderByDescending(pair => pair.Value)
+                .Select((pair, index) => new
+                {
+                    customerId = pair.Key,
+                    score = pair.Value,
+                    rank = index + 1
+                })
+                .ToList();
+
+            var result = rankedLeaderboard
+                .Where(c => c.rank >= start && c.rank <= end)
+                .ToList();
+
+            return Ok(result);
         }
     }
 }

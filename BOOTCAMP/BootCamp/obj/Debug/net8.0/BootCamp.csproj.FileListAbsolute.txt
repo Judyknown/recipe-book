@@ -27,7 +27,6 @@ C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\staticweb
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\BootCamp.csproj.Up2Date
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\BootCamp.dll
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\refint\BootCamp.dll

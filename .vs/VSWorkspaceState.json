@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github",
-    "\\.github\\workflows",
-    "\\BootCamp"
+    "\\BootCamp",
+    "\\BootCamp\\BootCamp",
+    "\\BootCamp\\BootCamp\\Properties"
   ],
+  "SelectedNode": "\\BootCamp\\BootCamp\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

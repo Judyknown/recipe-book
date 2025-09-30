@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\.github",
-    "\\.github\\workflows"
+    "\\.github\\workflows",
+    "\\BootCamp"
   ],
   "PreviewInSolutionExplorer": false
 }

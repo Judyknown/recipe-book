@@ -8,6 +8,7 @@ on:
     branches: [ breakfast ]
   pull_request:
     branches: [ breakfast ]
+  workflow_dispatch:
 
 jobs:
   build:

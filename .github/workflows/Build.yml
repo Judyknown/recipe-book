@@ -19,6 +19,7 @@ jobs:
     
     - name: Check .NET version
       run: dotnet --info
+      shell: cmd
     
     - name: Restore dependencies
       run: dotnet restore

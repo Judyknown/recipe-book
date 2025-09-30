@@ -3,8 +3,10 @@
     "",
     "\\BootCamp",
     "\\BootCamp\\BootCamp",
+    "\\BootCamp\\BootCamp\\Controllers",
+    "\\BootCamp\\BootCamp\\Data",
     "\\BootCamp\\BootCamp\\Properties"
   ],
-  "SelectedNode": "\\BootCamp\\BootCamp\\Program.cs",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

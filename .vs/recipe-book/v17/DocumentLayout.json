@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\CustomerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BootCamp\\BootCamp\\Controllers\\CustomerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BootCamp\\BootCamp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BootCamp\\BootCamp\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\LeaderboardCustomerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BootCamp\\BootCamp\\Controllers\\LeaderboardCustomerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Judy.Zhu\\Study\\recipe-book\\.github\\workflows\\Build.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\workflows\\Build.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\LeaderboardRankController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BootCamp\\BootCamp\\Controllers\\LeaderboardRankController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\CustomerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BootCamp\\BootCamp\\Controllers\\CustomerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,81 +37,30 @@
               "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Program.cs",
               "RelativeDocumentMoniker": "BootCamp\\BootCamp\\Program.cs",
               "ToolTip": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Program.cs",
               "RelativeToolTip": "BootCamp\\BootCamp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T19:48:31.303Z",
+              "WhenOpened": "2025-09-30T21:02:06.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "BootCamp\\BootCamp\\Controllers\\CustomerController.cs",
               "ToolTip": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "BootCamp\\BootCamp\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T19:06:39.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LeaderboardCustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\LeaderboardCustomerController.cs",
-              "RelativeDocumentMoniker": "BootCamp\\BootCamp\\Controllers\\LeaderboardCustomerController.cs",
-              "ToolTip": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\LeaderboardCustomerController.cs",
-              "RelativeToolTip": "BootCamp\\BootCamp\\Controllers\\LeaderboardCustomerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T19:06:43.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LeaderboardRankController.cs",
-              "DocumentMoniker": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\LeaderboardRankController.cs",
-              "RelativeDocumentMoniker": "BootCamp\\BootCamp\\Controllers\\LeaderboardRankController.cs",
-              "ToolTip": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Controllers\\LeaderboardRankController.cs",
-              "RelativeToolTip": "BootCamp\\BootCamp\\Controllers\\LeaderboardRankController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T19:06:41.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Build.yml",
-              "DocumentMoniker": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\.github\\workflows\\Build.yml",
-              "RelativeDocumentMoniker": ".github\\workflows\\Build.yml",
-              "ToolTip": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\.github\\workflows\\Build.yml",
-              "RelativeToolTip": ".github\\workflows\\Build.yml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-09-29T19:50:13.227Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "BootCamp\\BootCamp\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\BootCamp\\Properties\\launchSettings.json",
-              "RelativeToolTip": "BootCamp\\BootCamp\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-30T19:53:42.956Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T21:01:52.983Z",
+              "EditorCaption": ""
             }
           ]
         }

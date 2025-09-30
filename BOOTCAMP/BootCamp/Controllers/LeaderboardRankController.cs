@@ -1,6 +1,5 @@
-using BootCamp.Data;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace BootCamp.Controllers
 {
@@ -8,31 +7,38 @@ namespace BootCamp.Controllers
     [Route("leaderboard")]
     public class LeaderboardRankController : ControllerBase
     {
-        // 3.2 Get customers by rank
-        // GET /leaderboard?start={start}&end={end}
-        [HttpGet]
-        public IActionResult GetCustomersByRank([FromQuery] int start, [FromQuery] int end)
+        private readonly LeaderboardService _svc;
+
+        public LeaderboardRankController(LeaderboardService svc)
         {
-            if (start <= 0 || end < start)
+            _svc = svc;
+
+            // 测试数据，可删除
+            _svc.DebugInject(200, 20);
+            _svc.DebugInject(100, 90);
+            _svc.DebugInject(50, 90);
+            _svc.DebugInject(10, 100);
+            _svc.DebugInject(98546, 200);
+            _svc.DebugInject(2, 4);
+        }
+
+        // GET /leaderboard?start=1&end=3
+        [HttpGet]
+        public IActionResult GetRange([FromQuery] int start, [FromQuery] int end)
+        {
+            // 输入校验
+            if (start < 1 || end < start)
+                return BadRequest(new ErrorDto("BadRange", "start>=1 and end>=start"));
+
+            var list = _svc.GetRange(start, end);
+
+            // 如果请求范围内没有数据，返回提示信息
+            if (list == null || list.Count == 0)
             {
-                return BadRequest("Invalid rank range.");
+                return Ok(new { message = "当前排行榜没有客户数据。" });
             }
 
-            var rankedLeaderboard = LeaderboardData.Leaderboard
-                .OrderByDescending(pair => pair.Value)
-                .Select((pair, index) => new
-                {
-                    customerId = pair.Key,
-                    score = pair.Value,
-                    rank = index + 1
-                })
-                .ToList();
-
-            var result = rankedLeaderboard
-                .Where(c => c.rank >= start && c.rank <= end)
-                .ToList();
-
-            return Ok(result);
+            return Ok(list);
         }
     }
 }

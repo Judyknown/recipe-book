@@ -33,3 +33,39 @@ C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\refint\Bo
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\BootCamp.pdb
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\BootCamp.genruntimeconfig.cache
 C:\Users\Judy.Zhu\Study\recipe-book\BootCamp\BootCamp\obj\Debug\net8.0\ref\BootCamp.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.csproj.AssemblyReference.cache
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.AssemblyInfoInputs.cache
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.AssemblyInfo.cs
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.csproj.CoreCompileInputs.cache
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.MvcApplicationPartsAssemblyInfo.cs
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.MvcApplicationPartsAssemblyInfo.cache
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.sourcelink.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\refint\BootCamp.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.pdb
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\appsettings.Development.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\appsettings.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\BootCamp.staticwebassets.endpoints.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\BootCamp.exe
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\BootCamp.deps.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\BootCamp.runtimeconfig.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\BootCamp.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\BootCamp.pdb
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\scopedcss\bundle\BootCamp.styles.css
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\staticwebassets.build.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\staticwebassets.development.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\swae.build.ex.cache
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.csproj.Up2Date
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\BootCamp.genruntimeconfig.cache
+C:\work\SortProject\New folder\BOOTCAMP\BootCamp\obj\Debug\net8.0\ref\BootCamp.dll

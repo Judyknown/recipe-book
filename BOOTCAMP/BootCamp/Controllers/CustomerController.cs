@@ -1,6 +1,4 @@
-using BootCamp.Data;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 
 namespace BootCamp.Controllers
 {
@@ -8,6 +6,9 @@ namespace BootCamp.Controllers
     [Route("customer")]
     public class CustomerController : ControllerBase
     {
+        private readonly LeaderboardService _svc;
+        public CustomerController(LeaderboardService svc) => _svc = svc;
+
         // 3.1 Update Score
         // POST /customer/{customerid}/score/{score}
         [HttpPost("{customerid:long}/score/{score:decimal}")]
@@ -24,27 +25,8 @@ namespace BootCamp.Controllers
                 return BadRequest("score must be in range [-1000, 1000].");
             }
 
-            // Insert if not exists, otherwise update by adding the new score
-            var newScore = LeaderboardData.Leaderboard.AddOrUpdate(
-                customerid,
-                score,                        // initial value if customer does not exist
-                (id, oldScore) => oldScore + score // update function if customer exists
-            );
+            var newScore = _svc.UpdateScore(customerid, score);
 
-            // Use LINQ to keep a sorted view (by score desc, then customerId asc)
-            var sortedLeaderboard = LeaderboardData.Leaderboard
-                .Where(x => x.Value > 0)                // only scores > 0 participate
-                .OrderByDescending(x => x.Value)        // higher score first
-                .ThenBy(x => x.Key)                     // if tie, smaller customerId first
-                .ToList();
-
-            // (Optional) find this customer's rank
-            var rank = sortedLeaderboard
-                .Select((entry, index) => new { entry.Key, Rank = index + 1 })
-                .FirstOrDefault(x => x.Key == customerid)?.Rank;
-
-            // Requirement: response = current score
-            // But you can also debug rank inside if needed
             return Ok(newScore);
         }
     }

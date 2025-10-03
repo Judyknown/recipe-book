@@ -1,64 +1,80 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
+using BootCamp.Data;
 
 namespace BootCamp
 {
     public sealed class LeaderboardService
     {
-        private readonly ReaderWriterLockSlim _lock = new(LockRecursionPolicy.NoRecursion);
+        // A light lock only used to create consistent snapshots (enumeration of ConcurrentDictionary is safe but not atomic)
+        private readonly ReaderWriterLockSlim _snapshotLock = new(LockRecursionPolicy.NoRecursion);
 
-        // 分数降序；同分 ID 升序
-        private readonly SortedDictionary<decimal, SortedSet<long>> _board =
-            new(new DescDecimalComparer());
+        // Add delta to a customer's score (insert if absent). Returns new accumulated score.
+        public decimal UpdateScore(long customerId, decimal delta)
+        {
+            return LeaderboardData.Leaderboard.AddOrUpdate(
+                customerId,
+                delta,
+                (_, old) => old + delta);
+        }
 
+        // Build a stable ordered snapshot (score desc, customerId asc) of items with score > 0.
+        private List<RankItem> BuildSnapshot()
+        {
+            _snapshotLock.EnterReadLock();
+            try
+            {
+                return LeaderboardData.Leaderboard
+                    .Where(kv => kv.Value > 0m)
+                    .OrderByDescending(kv => kv.Value)
+                    .ThenBy(kv => kv.Key)
+                    .Select((kv, index) => new RankItem(kv.Key, kv.Value, index + 1))
+                    .ToList();
+            }
+            finally
+            {
+                _snapshotLock.ExitReadLock();
+            }
+        }
+
+        // Get rank range [start, end] (1-based inclusive)
         public List<RankItem> GetRange(int start, int end)
         {
-            _lock.EnterReadLock();
-            try
-            {
-                var res = new List<RankItem>(end - start + 1);
-                int rank = 0;
-
-                foreach (var kv in _board)          // 分数降序
-                {
-                    var score = kv.Key;
-                    foreach (var id in kv.Value)    // 同分 ID 升序
-                    {
-                        rank++;
-                        if (rank < start) continue;
-                        if (rank > end) return res;
-
-                        res.Add(new RankItem(id, score, rank));
-                    }
-                }
-                return res;
-            }
-            finally { _lock.ExitReadLock(); }
+            if (start < 1 || end < start) return new();
+            var snapshot = BuildSnapshot();
+            if (start > snapshot.Count) return new();
+            int take = end - start + 1;
+            return snapshot.Skip(start - 1).Take(take).ToList();
         }
 
-        // 给测试用的注入方法
+        // Get a customer and its high(low) neighbors
+        public CustomerWithNeighborsResult? GetWithNeighbors(long customerId, int high, int low)
+        {
+            if (high < 0) high = 0;
+            if (low < 0) low = 0;
+
+            var snapshot = BuildSnapshot();
+            var idx = snapshot.FindIndex(r => r.CustomerId == customerId);
+            if (idx < 0) return null;
+
+            int highStart = idx - high;
+            if (highStart < 0) highStart = 0;
+            var highNeighbors = snapshot.Skip(highStart).Take(idx - highStart).ToList();
+            var lowNeighbors = snapshot.Skip(idx + 1).Take(low).ToList();
+
+            return new CustomerWithNeighborsResult(snapshot[idx], highNeighbors, lowNeighbors);
+        }
+
+        // Debug seed (overwrite absolute score if >0)
         public void DebugInject(long customerId, decimal score)
         {
-            _lock.EnterWriteLock();
-            try
-            {
-                if (score <= 0m) return;
-                if (!_board.TryGetValue(score, out var set))
-                {
-                    set = new SortedSet<long>();
-                    _board[score] = set;
-                }
-                set.Add(customerId);
-            }
-            finally { _lock.ExitWriteLock(); }
+            if (score <= 0m) return;
+            LeaderboardData.Leaderboard.AddOrUpdate(customerId, score, (_, _) => score);
         }
-    }
-
-    internal sealed class DescDecimalComparer : IComparer<decimal>
-    {
-        public int Compare(decimal x, decimal y) => -x.CompareTo(y); // 降序
     }
 
     public readonly record struct RankItem(long CustomerId, decimal Score, int Rank);
     public readonly record struct ErrorDto(string Code, string Message);
+    public sealed record CustomerWithNeighborsResult(RankItem Customer, IReadOnlyList<RankItem> High, IReadOnlyList<RankItem> Low);
 }

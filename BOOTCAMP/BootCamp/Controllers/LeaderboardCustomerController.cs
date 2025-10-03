@@ -15,51 +15,27 @@ namespace BootCamp.Controllers
     [Route("leaderboard")]
     public class LeaderboardCustomerController : ControllerBase
     {
-        // 全局分数表，前两个功能会维护这个表
-        private static readonly Dictionary<long, decimal> ScoreTable = new();
+        private readonly LeaderboardService _svc;
+        public LeaderboardCustomerController(LeaderboardService svc) => _svc = svc;
 
-        // 供分数更新和按排名查询功能调用
-        public static void UpdateScore(long customerId, decimal delta)
-        {
-            if (ScoreTable.ContainsKey(customerId))
-                ScoreTable[customerId] += delta;
-            else
-                ScoreTable[customerId] = delta;
-        }
-
-        public static List<LeaderboardCustomer> GetLeaderboard()
-        {
-            // 只统计分数大于0的客户
-            var ranked = ScoreTable
-                .Where(kv => kv.Value > 0)
-                .OrderByDescending(kv => kv.Value)
-                .ThenBy(kv => kv.Key)
-                .Select((kv, idx) => new LeaderboardCustomer
-                {
-                    CustomerId = kv.Key,
-                    Score = kv.Value,
-                    Rank = idx + 1
-                })
-                .ToList();
-            return ranked;
-        }
-
-        // 你负责的接口
         // GET /leaderboard/{customerid}?high={high}&low={low}
         [HttpGet("{customerid:long}")]
         public IActionResult GetCustomerWithNeighbors(long customerid, [FromQuery] int high = 0, [FromQuery] int low = 0)
         {
-            var leaderboard = GetLeaderboard();
-            int idx = leaderboard.FindIndex(c => c.CustomerId == customerid);
-            if (idx == -1)
+            if (high < 0) high = 0;
+            if (low < 0) low = 0;
+
+            var result = _svc.GetWithNeighbors(customerid, high, low);
+            if (result is null)
                 return NotFound($"CustomerId {customerid} not found or not ranked.");
 
-            int start = System.Math.Max(0, idx - high);
-            int end = System.Math.Min(leaderboard.Count - 1, idx + low);
+            // Compose list in the same format as original implementation: high neighbors + self + low neighbors
+            var list = new List<LeaderboardCustomer>(high + 1 + low);
+            list.AddRange(result.High.Select(r => new LeaderboardCustomer { CustomerId = r.CustomerId, Score = r.Score, Rank = r.Rank }));
+            list.Add(new LeaderboardCustomer { CustomerId = result.Customer.CustomerId, Score = result.Customer.Score, Rank = result.Customer.Rank });
+            list.AddRange(result.Low.Select(r => new LeaderboardCustomer { CustomerId = r.CustomerId, Score = r.Score, Rank = r.Rank }));
 
-            var result = leaderboard.GetRange(start, end - start + 1);
-
-            return Ok(result);
+            return Ok(list);
         }
     }
 }

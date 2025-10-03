@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Judy.Zhu\\Study\\recipe-book\\BootCamp\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Mingzhou.Zhang\\OneDrive - Solera Holdings, Inc\\Desktop\\New folder (3)\\recipe-book\\BOOTCAMP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA7BF73-8A1B-47C7-A23D-D457F694D6AA}|BootCamp\\BootCamp.csproj|c:\\users\\mingzhou.zhang\\onedrive - solera holdings, inc\\desktop\\new folder (3)\\recipe-book\\bootcamp\\bootcamp\\bootcamp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{ACA7BF73-8A1B-47C7-A23D-D457F694D6AA}|BootCamp\\BootCamp.csproj|solutionrelative:bootcamp\\bootcamp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACA7BF73-8A1B-47C7-A23D-D457F694D6AA}|BootCamp\\BootCamp.csproj|c:\\users\\mingzhou.zhang\\onedrive - solera holdings, inc\\desktop\\new folder (3)\\recipe-book\\bootcamp\\bootcamp\\controllers\\leaderboardcustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA7BF73-8A1B-47C7-A23D-D457F694D6AA}|BootCamp\\BootCamp.csproj|solutionrelative:bootcamp\\controllers\\leaderboardcustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +35,36 @@
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BootCamp.http",
+              "DocumentMoniker": "C:\\Users\\Mingzhou.Zhang\\OneDrive - Solera Holdings, Inc\\Desktop\\New folder (3)\\recipe-book\\BOOTCAMP\\BootCamp\\BootCamp.http",
+              "RelativeDocumentMoniker": "BootCamp\\BootCamp.http",
+              "ToolTip": "C:\\Users\\Mingzhou.Zhang\\OneDrive - Solera Holdings, Inc\\Desktop\\New folder (3)\\recipe-book\\BOOTCAMP\\BootCamp\\BootCamp.http",
+              "RelativeToolTip": "BootCamp\\BootCamp.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-10-03T14:46:59.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LeaderboardCustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\Mingzhou.Zhang\\OneDrive - Solera Holdings, Inc\\Desktop\\New folder (3)\\recipe-book\\BOOTCAMP\\BootCamp\\Controllers\\LeaderboardCustomerController.cs",
+              "RelativeDocumentMoniker": "BootCamp\\Controllers\\LeaderboardCustomerController.cs",
+              "ToolTip": "C:\\Users\\Mingzhou.Zhang\\OneDrive - Solera Holdings, Inc\\Desktop\\New folder (3)\\recipe-book\\BOOTCAMP\\BootCamp\\Controllers\\LeaderboardCustomerController.cs",
+              "RelativeToolTip": "BootCamp\\Controllers\\LeaderboardCustomerController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T14:30:11.131Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,4 +1,23 @@
-"" 
-BooTCamp/bin/
-BooTCamp/obj/
+## Build artifacts
+bin/
+obj/
+
+## Visual Studio
 .vs/
+*.user
+*.suo
+
+## Rider
+.idea/
+
+## Logs
+*.log
+
+## NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+
+## Others
+*.cache
+*.pdb

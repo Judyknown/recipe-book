@@ -22,14 +22,26 @@ After starting, open Swagger UI: `https://localhost:<port>/swagger` to explore a
 |---------|----------------|-------------|
 | Update (increment) a customer's score | POST `/customer/{customerid}/score/{score}` | `score` is a delta in range [-1000, 1000]; returns new accumulated score (creates entry if absent) |
 | Query a leaderboard range | GET `/leaderboard?start={s}&end={e}` | 1-based inclusive rank range; returns a sorted slice (Score DESC, CustomerId ASC) |
+| Get a customer with neighbors | GET `/leaderboard/{customerid}?high={h}&low={l}` | Returns an ordered list High → Self → Low; negative `high/low` are clamped to 0; 404 if user not ranked |
+
 
 Leaderboard item shape:
 ```json
-{
-  "customerId": 123,
-  "score": 456.78,
-  "rank": 1
-}
+  {
+    "customerId": 126,
+    "score": 1230.69,
+    "rank": 1
+  },
+  {
+    "customerId": 123,
+    "score": 456.78,
+    "rank": 2
+  },
+  {
+    "customerId": 135,
+    "score": 432.11,
+    "rank": 3
+  }
 ```
 Error example:
 ```json
@@ -53,6 +65,11 @@ curl "https://localhost:7280/leaderboard?start=1&end=10"
 - Read lock around snapshot building gives a consistent ordered view during enumeration
 - Sorting rule: Score DESC, CustomerId ASC
 - Only scores > 0 appear on the leaderboard
+- Neighbors endpoint returns a single ordered array: High -> Self -> Low.
+- If no neighbors are available, the array contains only the requested customer. Windows are truncated at leaderboard boundaries.
+- High/Low default to 0; negative values are clamped to 0.
+- If the customer isn't ranked (missing), it returns 404.
+
 
 ## Directory Structure (excerpt)
 ```
@@ -60,6 +77,7 @@ BootCamp/
   Controllers/
     CustomerController.cs
     LeaderboardRankController.cs
+    LeaderboardCustomerController.cs
   LeaderboardService.cs
   Program.cs
 README.md
@@ -83,6 +101,7 @@ Not yet specified (can add MIT or other as needed).
 ## Recent Changelog
 - Added leaderboard range query controller
 - Added score update endpoint & base service logic
+- Added neighbors endpoint
 - Expanded README (English version)
 
 Contributions via Issues / PRs are welcome.
